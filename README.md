@@ -18,6 +18,7 @@ Scans all PDFs in the folder and applies your digital ID signature to all of the
 
 
 ### Add executable to Explorer context menu
+> **NOTE:** You can also refer to [this answer from StackOverflow](https://stackoverflow.com/questions/3681032/set-icon-for-custom-right-click-context-menu-item-for-all-desktop-shortcuts-win).
 1. Open the Registry editor (regedit.msc).
 2. Navigate to `Computer\HKEY_CLASSES_ROOT\directory\background\shell`.
 3. Right click on 'shell' › 'New' › 'Key'.
@@ -44,7 +45,7 @@ You should now see a new context menu command called 'Sign all PDFs from this di
 
 ## Development
 ### Generate a test certificate
-1. Running `toos/gen_cert.ps1` in PowerShell generates a test certificate called "MY_TEST_CERTIFICATE.pfx"
+1. Running `tools/gen_cert.ps1` in PowerShell generates a test certificate called "MY_TEST_CERTIFICATE.pfx"
     - The password is `password`.
 2. Move this certificate in the same directory as `SignPDF.exe`.
 
