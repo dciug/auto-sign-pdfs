@@ -29,6 +29,7 @@
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>$(TAREGT_FRAMEWORK_VERSION)</TargetFrameworkVersion>
     <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -41,7 +42,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -95,6 +95,10 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <Name>System</Name>
@@ -122,6 +126,8 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="adobe.ico" />
+    <Content Include="AdobeIcon.ico" />
     <Content Include="App.ico" />
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>

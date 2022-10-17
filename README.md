@@ -49,6 +49,10 @@ You should now see a new context menu command called 'Sign all PDFs from this di
     - The password is `password`.
 2. Move this certificate in the same directory as `SignPDF.exe`.
 
+### Generate the executable installer
+1. Go to `tools` directory.
+2. Run `ps2exe .\install.ps1` (assumming `ps2exe` is installed in PowerShell).
+
 ### Tested with:
 - Windows 10 `19044.2006`
 - Adobe Acrobat Standard DC (32 bit)
