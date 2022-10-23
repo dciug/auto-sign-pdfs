@@ -10,11 +10,25 @@ Scans all PDFs in the folder and applies your digital ID signature to all of the
 
 
 ## Requirements
-1. Add `sdkAddSignature.js` to the `Javascripts` folder from your Acrobat installation folder.
+1. Add `tools/sdkAddSignature.js` to the `Javascripts` folder from your Acrobat installation folder.
     - Example path: "C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\Javascripts"
 2. Restart Adobe Acrobat.
 3. There should now be a new command labeled "Add My Signature" under "Edit" › "Acrobat SDK JavaScript"
 4. Add your `certificate.pfx` into the same directory as `SignPDF.exe`.
+
+
+### Without `.pfx`
+If you cannot export your `.pfx` certificate, you can use this version to prompt the user to select a certificate:
+1. Add `./tools/without_pfx/sdkAddSignature.js` to the `Javascripts` folder from your Acrobat installation folder.
+    - Example path: "C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\Javascripts"
+2. Restart Adobe Acrobat.
+3. There should now be a new command labeled "Sign all active documents" under "Edit" › "Acrobat SDK JavaScript"
+4. This will do two things:
+    - Retrieve your certificates. Select one.
+    - Scan the currently active documents for signature fields. Select one or choose to add a new field at the top-left corner of your screen.
+5. Input your password
+
+No external executable required.
 
 
 ### Add executable to Explorer context menu
